@@ -19,4 +19,12 @@
 
     <color name="textColor">#155A8E</color>
 
+    <color name="aliceBlue">#ebf0f2</color>
+    <color name="airSuperiorityBlue">#74A4BC</color>
+    <color name="columbiaBlue">#C0E7FA</color>
+    <color name="blueGreen">#5097BA</color>
+    <color name="blueSapphire">#346983</color>
+    <color name="superiorityBlue">#6FABC9</color>
+    <color name="charcoal">#1D3A49</color>
+
 </resources>

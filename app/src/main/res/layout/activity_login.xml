@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <LinearLayout
         android:id="@+id/linearLay"
@@ -49,14 +49,13 @@
             android:contentDescription="@string/logo"
             android:src="@drawable/water_drop" />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/copse"
             android:text="@string/welcome_back"
-            android:textColor="@color/textColor"
+            android:textColor="@color/charcoal"
             android:textSize="25sp" />
 
     </LinearLayout>
@@ -70,8 +69,10 @@
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         android:padding="5dip"
-        android:textColor="@color/black"
+        android:textColor="@color/charcoal"
+        android:textColorHint="@color/aliceBlue"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/guideHorizontal2" />
 
@@ -84,7 +85,8 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:padding="5dip"
-        android:textColor="@color/black"
+        android:textColor="@color/charcoal"
+        android:textColorHint="@color/aliceBlue"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/guideHorizontal3" />
@@ -96,5 +98,24 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_begin="330dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

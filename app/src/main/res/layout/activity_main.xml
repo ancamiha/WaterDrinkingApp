@@ -31,7 +31,7 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/copse"
             android:text="@string/drink"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/charcoal"
             android:textSize="30sp"
             android:visibility="visible" />
 
@@ -52,10 +52,10 @@
                 <Button
                     android:id="@+id/loginBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="80dp"
-                    android:backgroundTint="@color/gradStop"
+                    android:background="@drawable/rounded_button"
                     android:text="@string/login"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
@@ -63,10 +63,10 @@
                 <Button
                     android:id="@+id/registerBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:backgroundTint="@color/gradStop"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_button"
                     android:text="@string/register"
                     android:textColor="@color/white"
                     android:textSize="15sp" />

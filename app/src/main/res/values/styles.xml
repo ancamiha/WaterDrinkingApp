@@ -1,9 +1,11 @@
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/blueGreen</item>
+        <item name="colorPrimaryDark">@color/blueGreen</item>
+        <item name="colorAccent">@color/aliceBlue</item>
+        <item name="fontFamily">@font/copse</item>
     </style>
 </resources>
