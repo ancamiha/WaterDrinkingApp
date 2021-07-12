@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         tvTitle.startAnimation(anim);
 
         layout1 = findViewById(R.id.layer1);
-        handler.postDelayed(startRunnable, 2000);
+        handler.postDelayed(startRunnable, 1500);
 
         Button loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -61,9 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Register button clicked");
 
                 Intent intent = new Intent(v.getContext(), Register.class);
-//                EditText editText = (EditText) findViewById(R.id.editText);
-//                String message = editText.getText().toString();
-//                intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);
             }
         });
