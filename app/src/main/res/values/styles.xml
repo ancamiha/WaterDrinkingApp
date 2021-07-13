@@ -7,5 +7,6 @@
         <item name="colorPrimaryDark">@color/blueGreen</item>
         <item name="colorAccent">@color/aliceBlue</item>
         <item name="fontFamily">@font/copse</item>
+        <item name="android:fontFamily">@font/copse</item>
     </style>
 </resources>

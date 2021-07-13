@@ -8,20 +8,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class Register extends AppCompatActivity {
+public class InfoActivity extends AppCompatActivity {
     private final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_info);
 
-        Button registerButton = findViewById(R.id.registerButton);
-        registerButton.setOnClickListener(new View.OnClickListener() {
+
+        Button saveBtn = findViewById(R.id.saveButton);
+        saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Register button clicked");
-                Intent intent = new Intent(v.getContext(), InfoActivity.class);
+                Log.d(TAG, "Save button clicked");
+                Intent intent = new Intent(v.getContext(), HomePage.class);
                 startActivity(intent);
             }
         });
