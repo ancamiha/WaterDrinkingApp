@@ -19,4 +19,5 @@
     <string name="activity_minutes_per_day">Activity [minutes per day]</string>
     <string name="save">Save</string>
     <string name="iconAttr1">Icon made by Freepik from www.flaticon.com.</string>
+    <string name="incorrect_credentials">Incorrect credentials!</string>
 </resources>

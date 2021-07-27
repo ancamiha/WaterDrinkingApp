@@ -6,7 +6,7 @@
     android:layout_marginTop="?attr/actionBarSize"
     android:background="@color/aliceBlue"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".SettingsFragment">
+    tools:context=".fragments.SettingsFragment">
 
     <TextView
         android:layout_width="match_parent"

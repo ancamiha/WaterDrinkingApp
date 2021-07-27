@@ -13,6 +13,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.waterdrinkingapp.fragments.MainFragment;
+import com.example.waterdrinkingapp.fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
