@@ -20,4 +20,5 @@
     <string name="save">Save</string>
     <string name="iconAttr1">Icon made by Freepik from www.flaticon.com.</string>
     <string name="incorrect_credentials">Incorrect credentials!</string>
+    <string name="please_fill_in_all_the_fields">Please fill in all the fields!</string>
 </resources>

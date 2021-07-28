@@ -2,14 +2,8 @@ package com.example.waterdrinkingapp.db;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-//@Entity(foreignKeys = @ForeignKey(entity = RegisterEntity.class,
-//        parentColumns = "id",
-//        childColumns = "registerId",
-//        onDelete = ForeignKey.NO_ACTION
-//))
 @Entity(tableName = "InformationTable")
 public class InformationEntity {
 
@@ -17,14 +11,14 @@ public class InformationEntity {
     @ColumnInfo(name = "id")
     private int id;
 
-//    @ColumnInfo(name = "registerId")
-//    private int registerId;
+    @ColumnInfo(name = "registerId")
+    private int registerId;
 
     @ColumnInfo(name = "weight")
-    private String weight;
+    private Double weight;
 
     @ColumnInfo(name = "activity")
-    private String activity;
+    private int activity;
 
     public int getId() {
         return id;
@@ -32,22 +26,22 @@ public class InformationEntity {
     public void setId(int id) {
         this.id = id;
     }
-//    public int getRegisterId() {
-//        return registerId;
-//    }
-//    public void setRegisterId(int registerId) {
-//        this.registerId = registerId;
-//    }
-    public String getWeight() {
+    public int getRegisterId() {
+        return registerId;
+    }
+    public void setRegisterId(int registerId) {
+        this.registerId = registerId;
+    }
+    public Double getWeight() {
         return weight;
     }
-    public void setWeight(String weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
-    public String getActivity() {
+    public int getActivity() {
         return activity;
     }
-    public void setActivity(String activity) {
+    public void setActivity(int activity) {
         this.activity = activity;
     }
 }

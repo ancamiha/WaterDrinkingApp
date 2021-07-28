@@ -112,12 +112,25 @@
         app:layout_constraintStart_toEndOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/guideHorizontal3" />
 
+    <TextView
+        android:id="@+id/incomplete_info"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:visibility="visible"
+        android:text="@string/please_fill_in_all_the_fields"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/activity_minutes"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideHorizontal4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.54" />
+        app:layout_constraintGuide_percent="0.56" />
 
     <Button
         android:id="@+id/saveButton"

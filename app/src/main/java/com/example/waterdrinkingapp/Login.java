@@ -33,7 +33,6 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                Log.d(TAG, "email afterTextChanged " + s);
                 userEmail = s.toString();
             }
         });

@@ -12,10 +12,13 @@ import java.util.List;
 public interface RegisterDao {
 
     @Query("select * from RegisterTable")
-    public abstract List<RegisterEntity> getEntities();
+    List<RegisterEntity> getEntities();
 
     @Query("select count(*) from RegisterTable where email=:email and password=:password ")
-    public abstract int checkIfExists(String email, String password);
+    int checkIfExists(String email, String password);
+
+    @Query("select id from RegisterTable order by id desc limit 1;")
+    int getRegisterId();
 
     @Insert
     void insertEntity(RegisterEntity data);
