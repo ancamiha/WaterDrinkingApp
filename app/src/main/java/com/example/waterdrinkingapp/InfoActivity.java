@@ -53,7 +53,7 @@ public class InfoActivity extends AppCompatActivity {
 
 
         EditText activity = findViewById(R.id.activity_minutes);
-        weight.addTextChangedListener(new TextWatcher() {
+        activity.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
