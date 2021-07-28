@@ -17,6 +17,8 @@ import com.example.waterdrinkingapp.db.InformationEntity;
 
 public class InfoActivity extends AppCompatActivity {
     private final String TAG = MainActivity.class.getSimpleName();
+    int activityVal;
+    Double weightVal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class InfoActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (s != null) {
                     incomplete_info.setVisibility(View.INVISIBLE);
+                    weightVal = Double.valueOf(s.toString());
                     informationEntity.setWeight(Double.valueOf(s.toString()));
                 } else {
                     incomplete_info.setVisibility(View.VISIBLE);
@@ -63,12 +66,17 @@ public class InfoActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (s != null) {
                     incomplete_info.setVisibility(View.INVISIBLE);
+                    activityVal = Integer.parseInt(s.toString());
                     informationEntity.setActivity(Integer.parseInt(s.toString()));
+
+                    Double water_intake = ((Double) weightVal / 30) + ((Double) ((Double) ((double) activityVal) / 30) * 0.35);
+                    informationEntity.setWaterIntake(water_intake);
                 } else {
                     incomplete_info.setVisibility(View.VISIBLE);
                 }
             }
         });
+
 
         Button saveBtn = findViewById(R.id.saveButton);
         saveBtn.setOnClickListener(new View.OnClickListener() {

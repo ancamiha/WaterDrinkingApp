@@ -20,6 +20,9 @@ public class InformationEntity {
     @ColumnInfo(name = "activity")
     private int activity;
 
+    @ColumnInfo(name = "water_intake")
+    private Double waterIntake;
+
     public int getId() {
         return id;
     }
@@ -43,5 +46,11 @@ public class InformationEntity {
     }
     public void setActivity(int activity) {
         this.activity = activity;
+    }
+    public Double getWaterIntake() {
+        return waterIntake;
+    }
+    public void setWaterIntake(Double waterIntake) {
+        this.waterIntake = waterIntake;
     }
 }
