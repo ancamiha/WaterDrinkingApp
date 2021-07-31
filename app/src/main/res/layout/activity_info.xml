@@ -30,7 +30,7 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideHorizontal1"
+        android:id="@+id/guideHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -59,7 +59,7 @@
         app:fontFamily="@font/delius"
         app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineMid"
-        app:layout_constraintTop_toBottomOf="@id/guideHorizontal1" />
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideHorizontal2"

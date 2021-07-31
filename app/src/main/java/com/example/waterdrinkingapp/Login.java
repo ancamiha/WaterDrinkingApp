@@ -27,9 +27,12 @@ public class Login extends AppCompatActivity {
         EditText email = (EditText) findViewById(R.id.emailLogin);
         email.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -40,9 +43,12 @@ public class Login extends AppCompatActivity {
         EditText password = (EditText) findViewById(R.id.passwordLogin);
         password.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -62,15 +68,16 @@ public class Login extends AppCompatActivity {
                         check = AppDatabase.getDatabase(Login.this).registerDao().checkIfExists(userEmail, userPass);
                     }
                 }.start();
-                if (check == 1) {
-                    Log.d(TAG, "Login button clicked");
-                    Intent intent = new Intent(v.getContext(), HomePage.class);
-                    startActivity(intent);
-                    invalid.setVisibility(View.INVISIBLE);
-                } else {
-                    invalid.setVisibility(View.VISIBLE);
-                    password.getText().clear();
-                }
+//                if (check == 1) {
+                Log.d(TAG, "Login button clicked");
+                Intent intent = new Intent(v.getContext(), HomePage.class);
+                startActivity(intent);
+                invalid.setVisibility(View.INVISIBLE);
+//                }
+//                } else {
+//                    invalid.setVisibility(View.VISIBLE);
+//                    password.getText().clear();
+//                }
 
             }
         });

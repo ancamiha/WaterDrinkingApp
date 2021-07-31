@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "777566469812",
+    "firebase_url": "https://waterdrinkingapp-3911d-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "waterdrinkingapp-3911d",
+    "storage_bucket": "waterdrinkingapp-3911d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777566469812:android:8c9c682d2320a21ab4e1e1",
+        "android_client_info": {
+          "package_name": "com.example.waterdrinkingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777566469812-8lic3smotoi997a620h634ocperlbeg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB39vaxCKUB-g9ATCqZrYMhbuy8-wRkT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777566469812-8lic3smotoi997a620h634ocperlbeg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

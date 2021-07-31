@@ -8,7 +8,7 @@
     tools:context=".Login">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideHorizontal1"
+        android:id="@+id/guideHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/guideHorizontal1">
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal">
 
         <ImageView
             android:id="@+id/imgLogo"

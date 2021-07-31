@@ -19,16 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imgLogo;
     TextView tvTitle;
-    RelativeLayout layout1;
-
-    Handler handler = new Handler();
-    Runnable startRunnable = new Runnable() {
-        @Override
-        public void run() {
-            tvTitle.setVisibility(View.GONE);
-            layout1.setVisibility(View.VISIBLE);
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,28 +31,17 @@ public class MainActivity extends AppCompatActivity {
         imgLogo.startAnimation(anim);
         tvTitle.startAnimation(anim);
 
-        layout1 = findViewById(R.id.layer1);
-        handler.postDelayed(startRunnable, 1500);
-
-        Button loginBtn = findViewById(R.id.loginBtn);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        new Thread(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Log.d(TAG, "Login button clicked");
-                Intent intent = new Intent(v.getContext(), Login.class);
-                startActivity(intent);
+            public void run() {
+                try {
+                    Thread.sleep(1500);
+                    Intent intent = new Intent(getApplicationContext(), Authentication.class);
+                    startActivity(intent);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-        });
-
-        Button registerBtn = findViewById(R.id.registerBtn);
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "Register button clicked");
-
-                Intent intent = new Intent(v.getContext(), Register.class);
-                startActivity(intent);
-            }
-        });
+        }).start();
     }
 }
