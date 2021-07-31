@@ -87,8 +87,6 @@ public class InfoActivity extends AppCompatActivity {
                     new Thread() {
                         @Override
                         public void run() {
-                            String registerId = String.valueOf(AppDatabase.getDatabase(InfoActivity.this).registerDao().getRegisterId());
-                            informationEntity.setRegisterId(Integer.parseInt(registerId));
                             AppDatabase.getDatabase(InfoActivity.this).informationDao().insertDetails(informationEntity);
                         }
                     }.start();

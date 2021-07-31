@@ -24,4 +24,10 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="hello">Hello, </string>
     <string name="reset_password">Reset password</string>
+    <string name="today_s_water_intake">Today\'s water intake</string>
+    <string name="_250ml">+250ml</string>
+    <string name="_750ml">+750ml</string>
+    <string name="_500ml">+500ml</string>
+    <string name="to_reach_target">To reach target:</string>
+    <string name="target">Target:</string>
 </resources>

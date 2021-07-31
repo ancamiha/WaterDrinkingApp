@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.waterdrinkingapp.fragments.HistoryFragment;
 import com.example.waterdrinkingapp.fragments.MainFragment;
 import com.example.waterdrinkingapp.fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -103,6 +104,13 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.containerFragment, new MainFragment());
+            fragmentTransaction.commit();
+        }
+
+        if (item.getItemId() == R.id.history) {
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.containerFragment, new HistoryFragment());
             fragmentTransaction.commit();
         }
 
