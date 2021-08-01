@@ -12,7 +12,7 @@ public class InformationEntity {
     private int id;
 
     @ColumnInfo(name = "registerId")
-    private int registerId;
+    private String registerId;
 
     @ColumnInfo(name = "weight")
     private Double weight;
@@ -20,8 +20,11 @@ public class InformationEntity {
     @ColumnInfo(name = "activity")
     private int activity;
 
+    @ColumnInfo(name = "current_quantity")
+    private int currentQuantity;
+
     @ColumnInfo(name = "water_intake")
-    private Double waterIntake;
+    private int waterIntake;
 
     public int getId() {
         return id;
@@ -29,10 +32,10 @@ public class InformationEntity {
     public void setId(int id) {
         this.id = id;
     }
-    public int getRegisterId() {
+    public String getRegisterId() {
         return registerId;
     }
-    public void setRegisterId(int registerId) {
+    public void setRegisterId(String registerId) {
         this.registerId = registerId;
     }
     public Double getWeight() {
@@ -47,10 +50,16 @@ public class InformationEntity {
     public void setActivity(int activity) {
         this.activity = activity;
     }
-    public Double getWaterIntake() {
+    public int getCurrentQuantity() {
+        return currentQuantity;
+    }
+    public void setCurrentQuantity(int currentQuantity) {
+        this.currentQuantity = currentQuantity;
+    }
+    public int getWaterIntake() {
         return waterIntake;
     }
-    public void setWaterIntake(Double waterIntake) {
+    public void setWaterIntake(int waterIntake) {
         this.waterIntake = waterIntake;
     }
 }

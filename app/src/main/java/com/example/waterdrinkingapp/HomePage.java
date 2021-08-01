@@ -2,6 +2,7 @@ package com.example.waterdrinkingapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -90,10 +91,13 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         actionBarDrawerToggle.syncState();
 
+        Bundle bundle = new Bundle();
+        bundle.putString("userUID", FirebaseAuth.getInstance().getCurrentUser().getUid());
+
         // load default fragment
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.containerFragment, new MainFragment());
+        fragmentTransaction.add(R.id.containerFragment, MainFragment.class, bundle, "userUID");
         fragmentTransaction.commit();
     }
 

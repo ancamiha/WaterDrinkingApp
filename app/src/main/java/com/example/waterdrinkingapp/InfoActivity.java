@@ -19,11 +19,15 @@ public class InfoActivity extends AppCompatActivity {
     private final String TAG = MainActivity.class.getSimpleName();
     int activityVal;
     Double weightVal;
+    int water_intake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        Intent registerIntent = getIntent();
+        String receivedUid = registerIntent.getStringExtra("userUID");
 
         TextView incomplete_info = findViewById(R.id.incomplete_info);
 
@@ -41,7 +45,7 @@ public class InfoActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (s != null) {
+                if (s != null && s.toString() != null) {
                     incomplete_info.setVisibility(View.INVISIBLE);
                     weightVal = Double.valueOf(s.toString());
                     informationEntity.setWeight(Double.valueOf(s.toString()));
@@ -51,6 +55,7 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
+        informationEntity.setCurrentQuantity(0);
 
         EditText activity = findViewById(R.id.activity_minutes);
         activity.addTextChangedListener(new TextWatcher() {
@@ -69,7 +74,7 @@ public class InfoActivity extends AppCompatActivity {
                     activityVal = Integer.parseInt(s.toString());
                     informationEntity.setActivity(Integer.parseInt(s.toString()));
 
-                    Double water_intake = ((Double) weightVal / 30) + ((Double) ((Double) ((double) activityVal) / 30) * 0.35);
+                    water_intake = (int) (((weightVal / 30) + (((double) activityVal / 30) * 0.35)) * 1000);
                     informationEntity.setWaterIntake(water_intake);
                 } else {
                     incomplete_info.setVisibility(View.VISIBLE);
@@ -87,6 +92,7 @@ public class InfoActivity extends AppCompatActivity {
                     new Thread() {
                         @Override
                         public void run() {
+                            informationEntity.setRegisterId(receivedUid);
                             AppDatabase.getDatabase(InfoActivity.this).informationDao().insertDetails(informationEntity);
                         }
                     }.start();

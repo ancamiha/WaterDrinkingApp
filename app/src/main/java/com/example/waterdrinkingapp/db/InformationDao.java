@@ -16,8 +16,14 @@ public interface InformationDao {
     @Insert
     void insertDetails(InformationEntity data);
 
-    @Update
-    void updateDetails(InformationEntity data);
+    @Query("select water_intake from InformationTable where registerId=:uid")
+    int getWaterIntake(String uid);
+
+    @Query("select current_quantity from InformationTable where registerId=:uid")
+    int getCurrentQuantity(String uid);
+
+    @Query("update InformationTable set current_quantity=:qty where registerId=:uid")
+    void updateDetails(int qty, String uid);
 
     @Delete
     void deleteDetails(InformationEntity data);
