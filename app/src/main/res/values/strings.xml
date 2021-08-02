@@ -30,4 +30,6 @@
     <string name="_500ml">+500ml</string>
     <string name="to_reach_target">To reach target:</string>
     <string name="target">Target:</string>
+    <string name="date">Date:</string>
+    <string name="quantity">Quantity:</string>
 </resources>
