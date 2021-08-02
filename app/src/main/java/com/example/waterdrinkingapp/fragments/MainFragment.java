@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 
 public class MainFragment extends Fragment {
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = MainFragment.class.getSimpleName();
     RecyclerView recyclerView;
     Adapter adapter;
     ArrayList<String> items;

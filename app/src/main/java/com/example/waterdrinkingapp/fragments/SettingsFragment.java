@@ -12,7 +12,7 @@ import com.example.waterdrinkingapp.MainActivity;
 import com.example.waterdrinkingapp.R;
 
 public class SettingsFragment extends Fragment {
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = SettingsFragment.class.getSimpleName();
     RecyclerView recyclerView;
 
     @Override

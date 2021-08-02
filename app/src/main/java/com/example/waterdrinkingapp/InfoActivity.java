@@ -16,7 +16,7 @@ import com.example.waterdrinkingapp.db.AppDatabase;
 import com.example.waterdrinkingapp.db.InformationEntity;
 
 public class InfoActivity extends AppCompatActivity {
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = InfoActivity.class.getSimpleName();
     int activityVal;
     Double weightVal;
     int water_intake;

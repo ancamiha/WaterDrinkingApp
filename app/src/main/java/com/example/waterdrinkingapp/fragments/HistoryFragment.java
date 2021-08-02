@@ -12,7 +12,7 @@ import com.example.waterdrinkingapp.R;
 
 
 public class HistoryFragment extends Fragment {
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = HistoryFragment.class.getSimpleName();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

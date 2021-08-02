@@ -20,8 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
-    private final String TAG = MainActivity.class.getSimpleName();
-    private boolean passCheck = false;
+    private final String TAG = Register.class.getSimpleName();
 
     private LinearLayout linearLayout;
     private EditText etFirstName, etLastName, etEmail, etPassword, etPasswordConfirmed;

@@ -18,7 +18,7 @@ import com.example.waterdrinkingapp.fragments.MainFragment;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = Adapter.class.getSimpleName();
 
     private LayoutInflater layoutInflater;
     private List<String> data;
