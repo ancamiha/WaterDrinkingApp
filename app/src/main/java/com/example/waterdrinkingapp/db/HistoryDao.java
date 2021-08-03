@@ -9,15 +9,15 @@ import java.util.List;
 
 @Dao
 public interface HistoryDao {
-    @Query("select * from InformationTable")
-    public abstract List<InformationEntity> getEntities();
+    @Query("select * from HistoryTable")
+    public abstract List<HistoryEntity> getEntities();
 
     @Insert
-    void insertDetails(InformationEntity data);
+    void insertDetails(HistoryEntity data);
 
     @Delete
-    void deleteDetails(InformationEntity data);
+    void deleteDetails(HistoryEntity data);
 
-    @Query("delete from InformationTable")
+    @Query("delete from HistoryTable")
     void deleteAllData();
 }

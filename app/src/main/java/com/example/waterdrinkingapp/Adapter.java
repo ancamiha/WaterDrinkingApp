@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.waterdrinkingapp.db.AppDatabase;
+import com.example.waterdrinkingapp.db.HistoryEntity;
 import com.example.waterdrinkingapp.fragments.MainFragment;
 
 import java.util.List;
@@ -18,9 +19,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     private final String TAG = Adapter.class.getSimpleName();
 
     private LayoutInflater layoutInflater;
-    private List<String> data;
+    private List<HistoryEntity> data;
 
-    public Adapter(Context context, List<String> data) {
+    public Adapter(Context context, List<HistoryEntity> data) {
         this.layoutInflater = LayoutInflater.from(context);
         this.data = data;
     }
@@ -36,7 +37,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // bind the text view with data received
 
-//        holder.tvNumber.setText("This is card number " + position);
+        HistoryEntity entity = data.get(position);
+        holder.date.setText(entity.getDate());
+        holder.quantity.setText(String.format("%s", entity.getQuantity()));
     }
 
     @Override
@@ -53,9 +56,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
             date = itemView.findViewById(R.id.date);
             quantity = itemView.findViewById(R.id.quantity);
-
-            date.setText("02.08.2021");
-            date.setText("2000ml");
         }
     }
 }

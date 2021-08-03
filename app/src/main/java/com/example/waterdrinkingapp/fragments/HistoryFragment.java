@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.waterdrinkingapp.Adapter;
 import com.example.waterdrinkingapp.R;
+import com.example.waterdrinkingapp.db.HistoryDatabase;
+import com.example.waterdrinkingapp.db.HistoryEntity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class HistoryFragment extends Fragment {
@@ -20,21 +22,20 @@ public class HistoryFragment extends Fragment {
 
     RecyclerView recyclerView;
     Adapter adapter;
-    ArrayList<String> items;
+    public List<HistoryEntity> entities;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
-        items = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            items.add("Card " + i);
-        }
+
+        entities = HistoryDatabase
+                .getDatabase(getContext()).historyDao().getEntities();
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new Adapter(getContext(), items);
+        adapter = new Adapter(getContext(), entities);
 
         recyclerView.setAdapter(adapter);
         return view;

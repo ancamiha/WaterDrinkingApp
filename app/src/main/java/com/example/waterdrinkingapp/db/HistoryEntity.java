@@ -3,9 +3,15 @@ package com.example.waterdrinkingapp.db;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 @Entity(tableName = "HistoryTable")
 public class HistoryEntity {
+    public HistoryEntity(String date, Integer quantity) {
+        this.date = date;
+        this.quantity = quantity;
+    }
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     private int id;
@@ -14,7 +20,7 @@ public class HistoryEntity {
     private String date;
 
     @ColumnInfo(name = "quantity")
-    private int quantity;
+    private Integer quantity;
 
     public int getId() {
         return id;
@@ -32,11 +38,11 @@ public class HistoryEntity {
         this.date = date;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 }
