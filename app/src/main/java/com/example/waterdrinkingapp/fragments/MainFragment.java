@@ -125,19 +125,19 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.button250:
                 qty = infoProfile.currentQuantity + 250;
-                percent = infoProfile.percent * 100 / infoProfile.getWaterIntake();
+                percent = qty * 100 / infoProfile.getWaterIntake();
                 reference.child("uid").child(Values.getReceivedUid()).child("currentQuantity").setValue(qty);
                 reference.child("uid").child(Values.getReceivedUid()).child("percent").setValue(percent);
                 break;
             case R.id.button500:
                 qty = infoProfile.currentQuantity + 500;
-                percent = infoProfile.percent * 100 / infoProfile.getWaterIntake();
+                percent = qty * 100 / infoProfile.getWaterIntake();
                 reference.child("uid").child(Values.getReceivedUid()).child("currentQuantity").setValue(qty);
                 reference.child("uid").child(Values.getReceivedUid()).child("percent").setValue(percent);
                 break;
             case R.id.button750:
                 qty = infoProfile.currentQuantity + 750;
-                percent = infoProfile.percent * 100 / infoProfile.getWaterIntake();
+                percent = qty * 100 / infoProfile.getWaterIntake();
                 reference.child("uid").child(Values.getReceivedUid()).child("currentQuantity").setValue(qty);
                 reference.child("uid").child(Values.getReceivedUid()).child("percent").setValue(percent);
                 break;
