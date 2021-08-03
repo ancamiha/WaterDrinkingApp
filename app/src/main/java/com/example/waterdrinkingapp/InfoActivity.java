@@ -3,7 +3,6 @@ package com.example.waterdrinkingapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class InfoActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = InfoActivity.class.getSimpleName();
-    int activityVal;
-    Double weightVal;
-    int water_intake;
 
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -94,23 +90,21 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        String uid = receivedUid;
-        Double etWeight = Double.valueOf(weight.getText().toString().trim());
-        Integer etActivity = Integer.valueOf(activity.getText().toString().trim());
-        Integer waterIntake = water_intake = (int) (((weightVal / 30) + (((double) activityVal / 30) * 0.35)) * 1000);
-        Integer currentQuantity = 0;
-        Integer percent = 0;
-
-        if (TextUtils.isEmpty(etWeight.toString()) && TextUtils.isEmpty(etActivity.toString())) {
+        if (weight.getText().toString().trim().isEmpty() && activity.getText().toString().trim().isEmpty()) {
             // if the text fields are empty
             // then show the below message.
             Toast.makeText(InfoActivity.this, "Please add some data.", Toast.LENGTH_SHORT).show();
         } else {
+            String uid = receivedUid;
+            Double etWeight = Double.valueOf(weight.getText().toString().trim());
+            Integer etActivity = Integer.valueOf(activity.getText().toString().trim());
+            Integer waterIntake = (int) (((etWeight / 30) + (((double) etActivity / 30) * 0.35)) * 1000);
+            Integer currentQuantity = 0;
+            Integer percent = 0;
             // else call the method to add
             // data to our database.
             addDataToFirebase(uid, etWeight, etActivity, waterIntake, currentQuantity, percent);
         }
-
     }
 
     private void addDataToFirebase(String uid, Double etWeight, Integer etActivity, Integer waterIntake, Integer currentQuantity, Integer percent) {

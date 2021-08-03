@@ -119,12 +119,12 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             fragmentTransaction.commit();
         }
 
-        if (item.getItemId() == R.id.settings) {
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.containerFragment, new SettingsFragment());
-            fragmentTransaction.commit();
-        }
+//        if (item.getItemId() == R.id.settings) {
+//            fragmentManager = getSupportFragmentManager();
+//            fragmentTransaction = fragmentManager.beginTransaction();
+//            fragmentTransaction.replace(R.id.containerFragment, new SettingsFragment());
+//            fragmentTransaction.commit();
+//        }
 
         if (item.getItemId() == R.id.logOut) {
             FirebaseAuth.getInstance().signOut();
