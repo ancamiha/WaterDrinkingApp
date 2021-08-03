@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.waterdrinkingapp.MainActivity;
 import com.example.waterdrinkingapp.R;
 
 public class SettingsFragment extends Fragment {

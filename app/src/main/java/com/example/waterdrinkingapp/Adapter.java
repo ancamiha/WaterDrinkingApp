@@ -9,9 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.waterdrinkingapp.db.AppDatabase;
 import com.example.waterdrinkingapp.db.HistoryEntity;
-import com.example.waterdrinkingapp.fragments.MainFragment;
 
 import java.util.List;
 
