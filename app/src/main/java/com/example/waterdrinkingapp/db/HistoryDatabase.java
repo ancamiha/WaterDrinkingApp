@@ -8,15 +8,15 @@ import androidx.room.RoomDatabase;
 @androidx.room.Database(entities = {HistoryEntity.class}, version = 1)
 public abstract class HistoryDatabase extends RoomDatabase {
 
-    private static AppDatabase INSTANCE;
+    private static HistoryDatabase INSTANCE;
 
     public abstract HistoryDao historyDao();
 
-    public static AppDatabase getDatabase(final Context context) {
+    public static HistoryDatabase getDatabase(final Context context) {
 
         if (INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                    AppDatabase.class,
+                    HistoryDatabase.class,
                     "history-database")
                     .allowMainThreadQueries()
                     .build();
