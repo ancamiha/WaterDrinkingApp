@@ -99,7 +99,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         Integer etActivity = Integer.valueOf(activity.getText().toString().trim());
         Integer waterIntake = water_intake = (int) (((weightVal / 30) + (((double) activityVal / 30) * 0.35)) * 1000);
         Integer currentQuantity = 0;
-        Integer percent = 0 / waterIntake;
+        Integer percent = 0;
 
         if (TextUtils.isEmpty(etWeight.toString()) && TextUtils.isEmpty(etActivity.toString())) {
             // if the text fields are empty
