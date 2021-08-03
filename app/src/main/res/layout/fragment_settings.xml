@@ -8,4 +8,16 @@
     android:background="@color/aliceBlue"
     tools:context=".fragments.SettingsFragment">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/delete_account"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
