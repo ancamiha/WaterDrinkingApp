@@ -94,6 +94,8 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         Bundle bundle = new Bundle();
         bundle.putString("userUID", FirebaseAuth.getInstance().getCurrentUser().getUid());
 
+        Values.setReceivedUid(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
         // load default fragment
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();

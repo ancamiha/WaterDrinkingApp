@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.waterdrinkingapp.Adapter;
 import com.example.waterdrinkingapp.R;
+import com.example.waterdrinkingapp.Values;
 import com.example.waterdrinkingapp.db.AppDatabase;
 import com.example.waterdrinkingapp.retrofit.InspirationAPI;
 import com.example.waterdrinkingapp.retrofit.Post;
@@ -81,7 +82,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String receivedUid = getArguments().getString("userUID");
+        String receivedUid = Values.getReceivedUid();
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         button250 = view.findViewById(R.id.button250);
